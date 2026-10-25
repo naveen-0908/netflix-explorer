@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title>Movie Details | Netflix Explorer</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+    <script src="{{url_for('static', filename='movie_details.js')}}"
+    defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Netflix Explorer</h1>
+        <p>Movie Details</p>
+    </header>
+
+    <main>
+        <a href="/" class="back-link">← Back to Movies</a>
+
+        <section 
+        id="movie-details"
+        data-movie-id="{{movie_id}}"
+        aria-live="polite">
+    <p>Loading movie details...</p>
+    </section>
+    </main>
+</body>
+</html>

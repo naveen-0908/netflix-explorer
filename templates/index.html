@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint"
+    content="width=device-width,initial-scale=1.0">
+
+    <title>Netflix Explorer</title>
+
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css') }}">
+    
+
+</head>
+<body>
+<header>
+    <h1>Netflix Explorer</h1>
+
+    <p>Welcome to Netflix Explorer</p>
+</header>
+
+<main>
+    <section class="search-section">
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by movie title...">
+
+        <button id="searchBtn">Search</button>
+    </section>
+
+    <!--Filters-->
+    <section class="filters">
+        <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="Movie">Movie</option>
+            <option value="TV Show">TV Show</option>
+        </select>
+
+        <input
+        type="number"
+        id="yearFilter"
+        placeholder="Release Year">
+
+        <select id="sortFilter">
+            <option value="title">Title</option>
+            <option value="release_year">Release Year</option>
+        </select>
+
+        <select id="orderFilter">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+
+        <button id="applyFilterBtn">Apply</button>
+    </section>
+
+    <!--Movies-->
+    <section>
+
+        <h2>Movies & Shows</h2>
+
+        <div id="movies-container">
+            <!--Movies will appear here-->
+        </div>
+    </section>
+
+    <!--Pagination-->
+    <section class="pagination">
+        <div id="pagination"></div>
+
+    </section>
+
+    <section id="movie-details"
+    class="movie-details"></section>
+
+    <div id="movies-container"></div>
+</main>
+
+<script src="{{url_for('static', filename='script.js')}}"></script>
+
+</body>
+
+</html>
